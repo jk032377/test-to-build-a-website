@@ -7,7 +7,12 @@ timezone: "Asia/Taipei"
 permalink: /journal/:year/:month/:day/:title/
 markdown: kramdown
 future: false
+google_analytics_id: ""
+google_adsense_id: ""
+plugins:
+  - jekyll-sitemap
 exclude:
   - README.md
+  - MIGRATION-WP-TO-GITHUB.md
   - Gemfile
   - Gemfile.lock

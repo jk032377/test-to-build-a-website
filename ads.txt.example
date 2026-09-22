@@ -1,0 +1,3 @@
+# 啟用 AdSense 後，請把 AdSense 後台提供的正式 ads.txt 內容放到網站根目錄的 ads.txt。
+# 範例格式（請勿直接使用此假 ID）：
+# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0

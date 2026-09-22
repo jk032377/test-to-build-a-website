@@ -7,11 +7,25 @@ description: "留白誌 MARGIN：關於閱讀、生活與城市的獨立筆記�
   <div class="hero-kicker">INDEPENDENT JOURNAL · TAIPEI</div>
   <div class="hero-grid">
     <div>
+      <div class="sketch-block">
+        <svg viewBox="0 0 320 120" aria-hidden="true" class="line-illustration">
+          <path d="M10 70 C55 20, 120 20, 150 70 S240 120, 310 40" />
+          <path d="M20 95 C70 80, 110 105, 170 90 S260 80, 300 100" />
+          <circle cx="248" cy="34" r="18" />
+        </svg>
+      </div>
       <h1>在快速的世界裡，<br>保留一點慢的餘地。</h1>
     </div>
+
     <div class="hero-note">
+      <div class="small-sketch small-sketch-leaf" aria-hidden="true"></div>
       <p>閱讀、生活、城市與那些值得被多看一眼的事。</p>
       <p class="issue">ISSUE 001 · 2026</p>
+      <form class="quick-search" action="{{ '/search/' | relative_url }}" method="get">
+        <label class="sr-only" for="quick-search-input">搜尋文章</label>
+        <input id="quick-search-input" type="search" name="q" placeholder="搜尋文章主題、分類、關鍵字">
+        <button type="submit">搜尋</button>
+      </form>
     </div>
   </div>
 </section>
@@ -19,7 +33,7 @@ description: "留白誌 MARGIN：關於閱讀、生活與城市的獨立筆記�
 {% assign featured = site.posts.first %}
 {% if featured %}
 <section class="feature shell">
-  <a class="feature-cover cover-{{ featured.tone | default: 'sand' }}" href="{{ featured.url | relative_url }}">
+  <a class="feature-cover cover-{{ featured.tone | default: 'sand' }} sketchy-frame" href="{{ featured.url | relative_url }}">
     <span>{{ featured.cover_word | default: featured.category }}</span>
   </a>
   <div class="feature-copy">
@@ -32,14 +46,16 @@ description: "留白誌 MARGIN：關於閱讀、生活與城市的獨立筆記�
 {% endif %}
 
 <section class="shell section-block">
-  <div class="section-heading ruled">
+  <div class="section-heading ruled with-doodle">
     <span>EDITOR'S PICKS</span>
     <h2>編輯選讀</h2>
+    <div class="heading-doodle heading-doodle-wave" aria-hidden="true"></div>
   </div>
+
   <div class="editor-grid">
     {% for post in site.posts offset:1 limit:3 %}
     <article class="editor-card">
-      <a class="card-cover cover-{{ post.tone | default: 'sand' }}" href="{{ post.url | relative_url }}"></a>
+      <a class="card-cover cover-{{ post.tone | default: 'sand' }} sketchy-frame" href="{{ post.url | relative_url }}"></a>
       <div class="card-meta">{{ post.category }} · {{ post.date | date: "%Y.%m.%d" }}</div>
       <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
       <p>{{ post.description }}</p>
@@ -49,10 +65,12 @@ description: "留白誌 MARGIN：關於閱讀、生活與城市的獨立筆記�
 </section>
 
 <section class="shell section-block latest">
-  <div class="section-heading ruled">
+  <div class="section-heading ruled with-doodle">
     <span>LATEST STORIES</span>
     <h2>最新文章</h2>
+    <div class="heading-doodle heading-doodle-loop" aria-hidden="true"></div>
   </div>
+
   <div class="story-list">
     {% for post in site.posts limit:8 %}
     <a class="story-row" href="{{ post.url | relative_url }}">
@@ -66,5 +84,6 @@ description: "留白誌 MARGIN：關於閱讀、生活與城市的獨立筆記�
     </a>
     {% endfor %}
   </div>
+
   <div class="center"><a class="outline-button" href="{{ '/archive/' | relative_url }}">查看所有文章</a></div>
 </section>
