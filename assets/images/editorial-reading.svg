@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="t d">
+<title id="t">慢讀與留白</title><desc id="d">茶杯、打開的書本與植物枝葉的極簡編輯插畫</desc>
+<defs>
+  <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f7f2e9"/><stop offset="1" stop-color="#e9e1d4"/></linearGradient>
+  <linearGradient id="cloth" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#ddd1c1"/><stop offset="1" stop-color="#cbbba7"/></linearGradient>
+</defs>
+<rect width="1200" height="900" fill="url(#bg2)"/>
+<circle cx="815" cy="230" r="170" fill="#d7b984" opacity=".6"/>
+<rect y="600" width="1200" height="300" fill="url(#cloth)"/>
+<path d="M910 220 C1030 280 970 400 1090 485 M954 260 l-70-42 M1000 325 l73-43 M1005 388 l-79 30 M1060 445 l70-18" fill="none" stroke="#3d4038" stroke-width="7" stroke-linecap="round"/>
+<g fill="#626b59">
+  <ellipse cx="883" cy="218" rx="38" ry="13" transform="rotate(30 883 218)"/>
+  <ellipse cx="1078" cy="282" rx="35" ry="12" transform="rotate(-29 1078 282)"/>
+  <ellipse cx="927" cy="420" rx="38" ry="13" transform="rotate(-18 927 420)"/>
+  <ellipse cx="1127" cy="425" rx="34" ry="11" transform="rotate(-16 1127 425)"/>
+</g>
+<path d="M1030 480 C1004 545 1015 600 1045 650 h125 c34-55 38-115 8-170z" fill="#343630"/>
+<ellipse cx="190" cy="714" rx="105" ry="22" fill="#746657" opacity=".22"/>
+<path d="M115 600 h160 q36 0 36 36 v82 q0 36-36 36H115q-36 0-36-36v-82q0-36 36-36z" fill="#efe8dc" stroke="#9c8c79" stroke-width="5"/>
+<path d="M275 624 q75 0 75 58 q0 58-75 58" fill="none" stroke="#9c8c79" stroke-width="12"/>
+<ellipse cx="190" cy="620" rx="72" ry="15" fill="#68452f"/>
+<path d="M190 560 C178 525 202 513 188 477" fill="none" stroke="#b9aa96" stroke-width="5" stroke-linecap="round"/>
+<g transform="translate(350 605) rotate(2)">
+  <path d="M0 25 Q145-10 300 30 V245 Q155 200 0 235z" fill="#f8f3e8" stroke="#a99a88" stroke-width="4"/>
+  <path d="M300 30 Q455-8 610 25 V235 Q458 200 300 245z" fill="#f6f0e5" stroke="#a99a88" stroke-width="4"/>
+  <path d="M300 30 v215" stroke="#b8ab99" stroke-width="4"/>
+  <path d="M30 70 h230 M30 100 h218 M30 130 h225 M30 160 h202" stroke="#b7aa99" stroke-width="3" opacity=".48"/>
+  <path d="M340 70 h230 M340 100 h215 M340 130 h225 M340 160 h200" stroke="#b7aa99" stroke-width="3" opacity=".42"/>
+</g>
+<path d="M210 385 C270 360 325 372 360 420" fill="none" stroke="#9c8e7d" stroke-width="4" opacity=".6"/>
+<path d="M438 555 q30-52 65-70 M465 522 l-38-22 M485 500 l31-26" fill="none" stroke="#69715e" stroke-width="4"/>
+</svg>

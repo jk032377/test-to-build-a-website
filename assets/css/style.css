@@ -161,3 +161,6 @@ img{max-width:100%}
   .editor-main{margin-bottom:14px}.editor-intro h1{font-size:38px}
   #editorText{min-height:470px}
 }
+
+.write-nav{border:1px solid var(--ink)!important;padding:5px 10px;border-radius:999px}
+.write-nav:hover{background:var(--ink);color:var(--paper)}
