@@ -164,3 +164,6 @@ img{max-width:100%}
 
 .write-nav{border:1px solid var(--ink)!important;padding:5px 10px;border-radius:999px}
 .write-nav:hover{background:var(--ink);color:var(--paper)}
+
+/* Preserve the original hero artwork exactly */
+.feature-photo{filter:none!important;object-fit:cover;object-position:center}
