@@ -3,7 +3,10 @@ layout: default
 ---
 <article class="post">
   <header class="post-hero shell-narrow">
-    <div class="eyebrow">{{ page.category | default: page.categories.first }}</div>
+    <div class="post-kicker-row">
+      <div class="eyebrow">{{ page.category | default: page.categories.first }}</div>
+      {% if page.migrated %}<div class="legacy-chip">MUKAIWORD ARCHIVE</div>{% endif %}
+    </div>
     <h1>{{ page.title }}</h1>
     {% if page.description %}<p class="post-deck">{{ page.description }}</p>{% endif %}
     <div class="post-meta">
@@ -71,6 +74,15 @@ layout: default
             {% endif %}
           {% endfor %}
         {% endif %}
+      </div>
+    </section>
+    <section class="author-card">
+      <div class="author-card-mark">木</div>
+      <div>
+        <div class="eyebrow">ABOUT THE AUTHOR</div>
+        <h2>木凱 Mukai</h2>
+        <p>寫作者、內容工作者。詩、散文、小說、評論與文史轉譯皆有涉獵；木凱創作道用來整理創作方法、閱讀札記與一路留下的工作筆記。</p>
+        <a class="text-link" href="{{ '/about/' | relative_url }}">關於木凱 →</a>
       </div>
     </section>
   </footer>

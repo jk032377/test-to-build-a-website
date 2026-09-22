@@ -1,18 +1,27 @@
 ---
 layout: default
-title: 文章
+title: 部落格
 permalink: /archive/
-description: "留白誌所有文章與分類。"
+description: "木凱創作道所有文章與分類。"
 ---
 <section class="page-hero shell">
-  <div class="eyebrow">ARCHIVE</div>
-  <h1>所有文章</h1>
-  <p>依照主題慢慢讀，不必一次讀完。</p>
+  <div class="eyebrow">ARCHIVE · MUKAI WORD</div>
+  <h1>部落格</h1>
+  <p>從創作方法、文學閱讀、電影到創作現場，沿著分類慢慢讀。</p>
+</section>
+
+<section class="shell archive-index">
+  <div class="archive-index-label">TOPICS</div>
+  <div class="archive-index-links">
+    {% for category in site.categories %}
+      <a href="#{{ category[0] }}">{{ category[0] }} <span>{{ category[1].size }}</span></a>
+    {% endfor %}
+  </div>
 </section>
 
 <section class="shell archive-wrap">
   {% for category in site.categories %}
-  <section class="archive-group">
+  <section class="archive-group" id="{{ category[0] }}">
     <div class="archive-title">
       <h2>{{ category[0] }}</h2>
       <span>{{ category[1].size }} 篇</span>

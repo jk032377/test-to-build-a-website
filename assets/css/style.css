@@ -167,3 +167,124 @@ img{max-width:100%}
 
 /* Preserve the original hero artwork exactly */
 .feature-photo{filter:none!important;object-fit:cover;object-position:center}
+
+
+/* =========================================================
+   MUKAI WORD redesign — old-site structure × editorial calm
+   ========================================================= */
+:root{
+  --paper:#f3efe5;
+  --paper-2:#ebe3d7;
+  --ink:#201f1b;
+  --muted:#6d6961;
+  --line:#c9c0b2;
+  --clay:#a36d59;
+  --sage:#788271;
+  --slate:#6d7d84;
+  --sand:#b59672;
+  --max:1220px;
+}
+body{
+  background:
+    radial-gradient(circle at 14% 12%,rgba(255,255,255,.42),transparent 24rem),
+    linear-gradient(180deg,var(--paper),#f1ece2 52%,var(--paper));
+}
+.site-header{background:rgba(243,239,229,.92)}
+.brand-zh{font-size:21px;letter-spacing:.08em}
+.brand-en{letter-spacing:.23em;color:var(--muted)}
+.nav{gap:24px}
+.footer-brand{letter-spacing:.04em}
+.reading-progress{background:var(--clay)}
+
+.mukai-hero{padding:72px 0 84px}
+.mukai-hero-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(300px,.7fr);gap:72px;align-items:end}
+.mukai-hero-main{padding-top:34px}
+.mukai-title-stack{margin:20px 0 28px}
+.mukai-title-stack h1{
+  font-family:"Noto Serif TC","Songti TC",serif;
+  font-weight:600;
+  font-size:clamp(58px,8vw,118px);
+  line-height:.95;
+  letter-spacing:.03em;
+  margin:0;
+}
+.mukai-en{font-family:Georgia,serif;font-size:clamp(22px,3.5vw,45px);letter-spacing:.32em;margin-top:20px;color:#4d4943}
+.mukai-manifesto{font-family:"Noto Serif TC","Songti TC",serif;font-size:20px;max-width:680px;color:#4f4a43}
+.mukai-hero-actions{display:flex;gap:26px;align-items:center;margin-top:32px}
+.mukai-hero-side{border-left:1px solid var(--line);padding-left:32px;position:relative;min-height:420px}
+.mukai-side-label{font-size:10px;letter-spacing:.26em;color:var(--muted);margin-bottom:22px}
+.mukai-hero-side ul{list-style:none;padding:0;margin:0;display:grid;gap:13px;font-family:"Noto Serif TC","Songti TC",serif}
+.mukai-hero-side li{display:flex;gap:16px;align-items:center}
+.mukai-hero-side li span{font-family:Georgia,serif;color:var(--clay);font-size:12px}
+.mukai-orbit{height:160px;position:relative;margin:26px 0 6px}
+.orbit-sun{width:118px;height:118px;border-radius:50%;background:rgba(181,150,114,.34);position:absolute;right:28px;top:4px}
+.orbit-line{position:absolute;right:12px;top:76px;width:180px;height:62px;border-top:1.5px solid var(--ink);border-radius:50%;transform:rotate(-12deg);opacity:.65}
+.orbit-line:after{content:"";position:absolute;right:28px;top:-18px;width:48px;height:22px;border:1px solid var(--sage);border-radius:50% 8% 50% 8%;transform:rotate(25deg)}
+.feature-mukai{border-top:1px solid var(--ink);padding-top:34px}
+.feature-mukai .feature-cover{aspect-ratio:5/4}
+.feature-meta{font-size:12px;color:var(--muted);margin-top:12px}
+
+.topic-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.topic-card{min-height:260px;padding:24px;border:1px solid rgba(31,31,27,.16);display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}
+.topic-card:after{content:"";width:94px;height:94px;border:1px solid rgba(31,31,27,.22);border-radius:50%;position:absolute;right:-20px;top:-18px}
+.topic-card span{position:absolute;top:20px;left:22px;font:12px Georgia,serif;color:var(--muted)}
+.topic-card h3{font-family:"Noto Serif TC","Songti TC",serif;font-size:26px;margin:0 0 8px}
+.topic-card p{font-size:13px;color:#4e4a44;margin:0}
+.topic-clay{background:rgba(163,109,89,.14)}
+.topic-sage{background:rgba(120,130,113,.15)}
+.topic-blue{background:rgba(109,125,132,.14)}
+.topic-sand{background:rgba(181,150,114,.15)}
+
+.migrated-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:26px 22px}
+.migrated-card{grid-column:span 4}
+.migrated-card:nth-child(1),.migrated-card:nth-child(2){grid-column:span 6}
+.migrated-card-media{display:block;aspect-ratio:4/3;overflow:hidden;margin-bottom:17px;border:1px solid rgba(31,31,27,.12)}
+.migrated-card-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.migrated-card:hover .migrated-card-media img{transform:scale(1.015)}
+.migrated-card h3{font-family:"Noto Serif TC","Songti TC",serif;font-size:24px;line-height:1.45;margin:7px 0}
+.migrated-card p{font-size:14px;color:var(--muted)}
+
+.mukai-about-band{margin-top:80px;border-top:1px solid var(--ink);border-bottom:1px solid var(--line);padding:46px 0;display:grid;grid-template-columns:110px 1fr auto;gap:36px;align-items:center}
+.mukai-about-monogram{width:86px;height:86px;border:1px solid var(--ink);border-radius:50%;display:grid;place-items:center;font-family:"Noto Serif TC","Songti TC",serif;font-size:40px}
+.mukai-about-band h2{font-family:"Noto Serif TC","Songti TC",serif;font-size:30px;margin:7px 0}.mukai-about-band p{margin:0;color:var(--muted);max-width:720px}
+
+.archive-index{display:flex;gap:30px;border-top:1px solid var(--ink);padding:22px 0 54px}
+.archive-index-label{font-size:10px;letter-spacing:.2em;color:var(--muted);min-width:120px}
+.archive-index-links{display:flex;flex-wrap:wrap;gap:10px 20px}
+.archive-index-links a{border-bottom:1px solid var(--line);padding-bottom:2px}
+.archive-index-links span{font-size:10px;color:var(--muted);margin-left:5px}
+
+.post-kicker-row{display:flex;align-items:center;gap:14px}
+.legacy-chip{font-size:9px;letter-spacing:.14em;border:1px solid var(--line);border-radius:99px;padding:3px 8px;color:var(--muted)}
+.post-body img{width:100%;height:auto;border-radius:1px}
+.post-body figure{margin:2.5em 0}
+.post-body figcaption,.post-body .wp-caption-text{font-family:-apple-system,BlinkMacSystemFont,"PingFang TC",sans-serif;font-size:12px;color:var(--muted);margin-top:7px}
+.post-body hr{border:0;border-top:1px solid var(--line);margin:3em 0}
+.post-body ul,.post-body ol{padding-left:1.4em;margin:0 0 1.6em}
+.post-body a:not(.inline-recommend a){text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.author-card{margin-top:70px;border-top:1px solid var(--ink);padding:34px 0;display:grid;grid-template-columns:88px 1fr;gap:24px;align-items:start}
+.author-card-mark{width:72px;height:72px;border-radius:50%;background:rgba(163,109,89,.18);display:grid;place-items:center;font-family:"Noto Serif TC","Songti TC",serif;font-size:32px}
+.author-card h2{font-family:"Noto Serif TC","Songti TC",serif;margin:3px 0 8px;font-size:25px}.author-card p{color:var(--muted);margin:0;max-width:720px}
+.about-hero h1{max-width:850px}
+
+@media(max-width:920px){
+  .mukai-hero-grid{grid-template-columns:1fr;gap:38px}
+  .mukai-hero-side{border-left:0;border-top:1px solid var(--line);padding:25px 0 0;min-height:0}
+  .mukai-orbit{display:none}
+  .topic-grid{grid-template-columns:repeat(2,1fr)}
+  .migrated-card,.migrated-card:nth-child(1),.migrated-card:nth-child(2){grid-column:span 6}
+  .mukai-about-band{grid-template-columns:90px 1fr}.mukai-about-band .outline-button{grid-column:2}
+}
+@media(max-width:640px){
+  .mukai-hero{padding-top:48px}
+  .mukai-title-stack h1{font-size:56px}
+  .mukai-en{font-size:19px;letter-spacing:.2em}
+  .mukai-manifesto{font-size:18px}
+  .mukai-hero-actions{align-items:flex-start;flex-direction:column;gap:12px}
+  .topic-grid{grid-template-columns:1fr}
+  .topic-card{min-height:190px}
+  .migrated-grid{display:block}.migrated-card{margin-bottom:34px}
+  .mukai-about-band{grid-template-columns:1fr;gap:18px}.mukai-about-band .outline-button{grid-column:auto;width:max-content}
+  .archive-index{display:block}.archive-index-label{margin-bottom:12px}
+  .post-kicker-row{align-items:flex-start;flex-direction:column;gap:7px}
+}
