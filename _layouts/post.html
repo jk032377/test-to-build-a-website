@@ -10,13 +10,25 @@ layout: default
       <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y.%m.%d" }}</time>
       <span>約 {{ content | number_of_words | divided_by: 350 | plus: 1 }} 分鐘閱讀</span>
     </div>
+    {% if page.image %}
+    <figure class="post-visual">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title | escape }}">
+    </figure>
+    {% else %}
     <div class="cover cover-{{ page.tone | default: 'sand' }}" role="img" aria-label="文章封面裝飾">
       <span>{{ page.cover_word | default: page.category }}</span>
     </div>
+    {% endif %}
   </header>
 
-  <div class="post-body shell-reading">
-    {{ content }}
+  <div class="post-reading-layout">
+    <aside class="reader-toc" id="readerToc" aria-label="文章目錄">
+      <div class="reader-toc-label">CONTENTS</div>
+      <nav id="readerTocNav"></nav>
+    </aside>
+    <div class="post-body shell-reading" id="postBody">
+      {{ content }}
+    </div>
   </div>
 
   <footer class="post-footer shell-narrow">
@@ -40,7 +52,7 @@ layout: default
           {% if post.url != page.url and shown < 3 %}
             {% if post.category == page.category or page.related contains post.slug %}
               <a class="mini-card" href="{{ post.url | relative_url }}">
-                <div class="mini-cover cover-{{ post.tone | default: 'sand' }}"></div>
+                {% if post.image %}<div class="mini-cover mini-photo"><img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}">{% else %}<div class="mini-cover cover-{{ post.tone | default: 'sand' }}">{% endif %}</div>
                 <div class="mini-meta">{{ post.category }} · {{ post.date | date: "%Y.%m.%d" }}</div>
                 <h3>{{ post.title }}</h3>
               </a>
@@ -52,7 +64,7 @@ layout: default
           {% for post in site.posts limit:3 %}
             {% if post.url != page.url %}
               <a class="mini-card" href="{{ post.url | relative_url }}">
-                <div class="mini-cover cover-{{ post.tone | default: 'sand' }}"></div>
+                {% if post.image %}<div class="mini-cover mini-photo"><img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}">{% else %}<div class="mini-cover cover-{{ post.tone | default: 'sand' }}">{% endif %}</div>
                 <div class="mini-meta">{{ post.category }} · {{ post.date | date: "%Y.%m.%d" }}</div>
                 <h3>{{ post.title }}</h3>
               </a>

@@ -33,8 +33,12 @@ description: "留白誌 MARGIN：關於閱讀、生活與城市的獨立筆記�
 {% assign featured = site.posts.first %}
 {% if featured %}
 <section class="feature shell">
-  <a class="feature-cover cover-{{ featured.tone | default: 'sand' }} sketchy-frame" href="{{ featured.url | relative_url }}">
-    <span>{{ featured.cover_word | default: featured.category }}</span>
+  <a class="feature-cover{% unless featured.image %} cover-{{ featured.tone | default: 'sand' }} sketchy-frame{% endunless %}" href="{{ featured.url | relative_url }}">
+    {% if featured.image %}
+      <img class="feature-photo" src="{{ featured.image | relative_url }}" alt="{{ featured.image_alt | default: featured.title | escape }}">
+    {% else %}
+      <span>{{ featured.cover_word | default: featured.category }}</span>
+    {% endif %}
   </a>
   <div class="feature-copy">
     <div class="eyebrow">FEATURED · {{ featured.category }}</div>
@@ -55,7 +59,9 @@ description: "留白誌 MARGIN：關於閱讀、生活與城市的獨立筆記�
   <div class="editor-grid">
     {% for post in site.posts offset:1 limit:3 %}
     <article class="editor-card">
-      <a class="card-cover cover-{{ post.tone | default: 'sand' }} sketchy-frame" href="{{ post.url | relative_url }}"></a>
+      <a class="card-cover{% unless post.image %} cover-{{ post.tone | default: 'sand' }} sketchy-frame{% endunless %}" href="{{ post.url | relative_url }}">
+        {% if post.image %}<img class="card-photo" src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title | escape }}">{% endif %}
+      </a>
       <div class="card-meta">{{ post.category }} · {{ post.date | date: "%Y.%m.%d" }}</div>
       <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
       <p>{{ post.description }}</p>

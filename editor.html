@@ -1,0 +1,51 @@
+---
+layout: default
+title: 寫作模式
+permalink: /editor/
+description: "留白誌的瀏覽器寫作編輯器原型：即時文章大綱、螢光筆與推薦閱讀插入。"
+---
+<section class="editor-page">
+  <div class="editor-intro">
+    <div class="eyebrow">WRITING MODE · PROTOTYPE</div>
+    <h1>一邊寫，一邊看見文章的骨架。</h1>
+    <p>這個版本會在瀏覽器自動保存草稿，左側即時顯示 H2 / H3 大綱；也能替選取文字加螢光筆，或搜尋站內文章後插入固定樣式的推薦閱讀。</p>
+  </div>
+
+  <div class="editor-workspace">
+    <aside class="editor-panel editor-outline-panel">
+      <div class="editor-panel-title">文章大綱</div>
+      <div id="editorOutline"></div>
+    </aside>
+
+    <section class="editor-panel editor-main">
+      <input id="editorTitle" class="editor-title-input" type="text" placeholder="文章標題">
+      <div class="editor-toolbar">
+        <button type="button" data-editor-insert="h2">H2 標題</button>
+        <button type="button" data-editor-insert="h3">H3 標題</button>
+        <button type="button" data-editor-insert="highlight">螢光筆</button>
+        <button type="button" data-editor-insert="quote">引用</button>
+      </div>
+      <textarea id="editorText" spellcheck="true" placeholder="開始寫文章……
+
+## 第一個段落標題
+
+正文。
+
+### 小節標題
+
+繼續寫。"></textarea>
+      <div class="editor-status-row">
+        <span id="editorStatus">草稿會自動存在這台瀏覽器</span>
+        <button class="editor-copy" id="editorCopy" type="button">複製完整 Markdown</button>
+      </div>
+    </section>
+
+    <aside class="editor-panel editor-tools">
+      <div class="editor-panel-title">插入推薦閱讀</div>
+      <input id="editorRecommendSearch" type="search" placeholder="輸入文章關鍵字">
+      <div id="editorRecommendResults"></div>
+      <p class="editor-note">點選搜尋結果後，會把「推薦閱讀」固定樣式直接插入游標位置。</p>
+      <p class="editor-note">目前這是瀏覽器端編輯器：可寫作、自動保存、插入格式與複製 Markdown；正式「登入後一鍵發布」適合在下一階段改成 Cloudflare Workers + D1 / R2。</p>
+    </aside>
+  </div>
+</section>
