@@ -158,6 +158,12 @@ def migrate(spec):
         for node in content.select(selector):
             node.decompose()
 
+    # Remove WordPress TOC widgets; the new site generates its own floating outline.
+    for node in list(content.find_all(["div","nav"])):
+        text_value = node.get_text(" ", strip=True)
+        if text_value.startswith("目錄") and "Toggle" in text_value and len(text_value) < 800:
+            node.decompose()
+
     # Avoid duplicating the page title when fallback selection picked a wider article node.
     for h1 in content.find_all("h1"):
         if h1.get_text(" ", strip=True) == title:
