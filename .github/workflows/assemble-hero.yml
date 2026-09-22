@@ -1,0 +1,41 @@
+name: Assemble full-resolution hero
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "tmp/hero-b64/**"
+      - ".github/workflows/assemble-hero.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Assemble exact WebP asset
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets/images
+          cat tmp/hero-b64/part*.txt | tr -d '\n\r' | base64 --decode > assets/images/margin-hero.webp
+          test "$(wc -c < assets/images/margin-hero.webp)" -eq 48052
+          echo "09acc4cc3a999a1f58e6e1e811792fd69b7088b14527412992109d4866eeaa73  assets/images/margin-hero.webp" | sha256sum -c -
+
+      - name: Commit assembled image
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/images/margin-hero.webp
+          if git diff --cached --quiet; then
+            echo "Image already correct."
+            exit 0
+          fi
+          git commit -m "Assemble exact full-resolution hero image"
+          git push
