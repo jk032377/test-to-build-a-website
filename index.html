@@ -1,0 +1,70 @@
+---
+layout: default
+title:
+description: "留白誌 MARGIN：關於閱讀、生活與城市的獨立筆記。"
+---
+<section class="home-hero shell">
+  <div class="hero-kicker">INDEPENDENT JOURNAL · TAIPEI</div>
+  <div class="hero-grid">
+    <div>
+      <h1>在快速的世界裡，<br>保留一點慢的餘地。</h1>
+    </div>
+    <div class="hero-note">
+      <p>閱讀、生活、城市與那些值得被多看一眼的事。</p>
+      <p class="issue">ISSUE 001 · 2026</p>
+    </div>
+  </div>
+</section>
+
+{% assign featured = site.posts.first %}
+{% if featured %}
+<section class="feature shell">
+  <a class="feature-cover cover-{{ featured.tone | default: 'sand' }}" href="{{ featured.url | relative_url }}">
+    <span>{{ featured.cover_word | default: featured.category }}</span>
+  </a>
+  <div class="feature-copy">
+    <div class="eyebrow">FEATURED · {{ featured.category }}</div>
+    <h2><a href="{{ featured.url | relative_url }}">{{ featured.title }}</a></h2>
+    <p>{{ featured.description }}</p>
+    <a class="text-link" href="{{ featured.url | relative_url }}">閱讀全文 →</a>
+  </div>
+</section>
+{% endif %}
+
+<section class="shell section-block">
+  <div class="section-heading ruled">
+    <span>EDITOR'S PICKS</span>
+    <h2>編輯選讀</h2>
+  </div>
+  <div class="editor-grid">
+    {% for post in site.posts offset:1 limit:3 %}
+    <article class="editor-card">
+      <a class="card-cover cover-{{ post.tone | default: 'sand' }}" href="{{ post.url | relative_url }}"></a>
+      <div class="card-meta">{{ post.category }} · {{ post.date | date: "%Y.%m.%d" }}</div>
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <p>{{ post.description }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="shell section-block latest">
+  <div class="section-heading ruled">
+    <span>LATEST STORIES</span>
+    <h2>最新文章</h2>
+  </div>
+  <div class="story-list">
+    {% for post in site.posts limit:8 %}
+    <a class="story-row" href="{{ post.url | relative_url }}">
+      <div class="story-no">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</div>
+      <div class="story-main">
+        <div class="card-meta">{{ post.category }}</div>
+        <h3>{{ post.title }}</h3>
+      </div>
+      <div class="story-date">{{ post.date | date: "%Y.%m.%d" }}</div>
+      <div class="story-arrow">↗</div>
+    </a>
+    {% endfor %}
+  </div>
+  <div class="center"><a class="outline-button" href="{{ '/archive/' | relative_url }}">查看所有文章</a></div>
+</section>

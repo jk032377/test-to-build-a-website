@@ -1,0 +1,65 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="post-hero shell-narrow">
+    <div class="eyebrow">{{ page.category | default: page.categories.first }}</div>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p class="post-deck">{{ page.description }}</p>{% endif %}
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y.%m.%d" }}</time>
+      <span>約 {{ content | number_of_words | divided_by: 350 | plus: 1 }} 分鐘閱讀</span>
+    </div>
+    <div class="cover cover-{{ page.tone | default: 'sand' }}" role="img" aria-label="文章封面裝飾">
+      <span>{{ page.cover_word | default: page.category }}</span>
+    </div>
+  </header>
+
+  <div class="post-body shell-reading">
+    {{ content }}
+  </div>
+
+  <footer class="post-footer shell-narrow">
+    <div class="post-nav">
+      {% if page.previous %}
+      <a href="{{ page.previous.url | relative_url }}"><span>上一篇</span><strong>{{ page.previous.title }}</strong></a>
+      {% endif %}
+      {% if page.next %}
+      <a href="{{ page.next.url | relative_url }}"><span>下一篇</span><strong>{{ page.next.title }}</strong></a>
+      {% endif %}
+    </div>
+
+    <section class="recommend">
+      <div class="section-heading">
+        <span>READ NEXT</span>
+        <h2>推薦閱讀</h2>
+      </div>
+      <div class="recommend-grid">
+        {% assign shown = 0 %}
+        {% for post in site.posts %}
+          {% if post.url != page.url and shown < 3 %}
+            {% if post.category == page.category or page.related contains post.slug %}
+              <a class="mini-card" href="{{ post.url | relative_url }}">
+                <div class="mini-cover cover-{{ post.tone | default: 'sand' }}"></div>
+                <div class="mini-meta">{{ post.category }} · {{ post.date | date: "%Y.%m.%d" }}</div>
+                <h3>{{ post.title }}</h3>
+              </a>
+              {% assign shown = shown | plus: 1 %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+        {% if shown == 0 %}
+          {% for post in site.posts limit:3 %}
+            {% if post.url != page.url %}
+              <a class="mini-card" href="{{ post.url | relative_url }}">
+                <div class="mini-cover cover-{{ post.tone | default: 'sand' }}"></div>
+                <div class="mini-meta">{{ post.category }} · {{ post.date | date: "%Y.%m.%d" }}</div>
+                <h3>{{ post.title }}</h3>
+              </a>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      </div>
+    </section>
+  </footer>
+</article>

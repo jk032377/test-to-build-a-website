@@ -1,0 +1,13 @@
+title: "留白誌 MARGIN"
+description: "關於閱讀、生活與城市的獨立筆記。"
+url: "https://jk032377.github.io"
+baseurl: "/test-to-build-a-website"
+lang: "zh-TW"
+timezone: "Asia/Taipei"
+permalink: /journal/:year/:month/:day/:title/
+markdown: kramdown
+future: false
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

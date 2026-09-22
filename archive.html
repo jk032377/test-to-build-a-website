@@ -1,0 +1,31 @@
+---
+layout: default
+title: 文章
+permalink: /archive/
+description: "留白誌所有文章與分類。"
+---
+<section class="page-hero shell">
+  <div class="eyebrow">ARCHIVE</div>
+  <h1>所有文章</h1>
+  <p>依照主題慢慢讀，不必一次讀完。</p>
+</section>
+
+<section class="shell archive-wrap">
+  {% for category in site.categories %}
+  <section class="archive-group">
+    <div class="archive-title">
+      <h2>{{ category[0] }}</h2>
+      <span>{{ category[1].size }} 篇</span>
+    </div>
+    <div>
+      {% for post in category[1] %}
+      <a class="archive-row" href="{{ post.url | relative_url }}">
+        <time>{{ post.date | date: "%Y.%m.%d" }}</time>
+        <strong>{{ post.title }}</strong>
+        <span>→</span>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+</section>
