@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="t d">
+<title id="t">水彩城市巷弄</title><desc id="d">低飽和水彩城市、老屋、窄巷、植栽與淡紫天空。</desc>
+<defs>
+ <linearGradient id="sky" y2="1"><stop stop-color="#eee8f3"/><stop offset="1" stop-color="#f4eee2"/></linearGradient>
+ <filter id="soft"><feTurbulence baseFrequency=".02" numOctaves="2" seed="11" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="8"/><feGaussianBlur stdDeviation=".6"/></filter>
+</defs>
+<rect width="1200" height="800" fill="url(#sky)"/>
+<g filter="url(#soft)" opacity=".72">
+ <path d="M0 280L250 215V650H0Z" fill="#cfb89e"/><path d="M210 250L470 190V650H210Z" fill="#b7b9a6"/>
+ <path d="M760 210L1030 260V650H760Z" fill="#c6b5c9"/><path d="M990 250L1200 315V650H990Z" fill="#aaafa0"/>
+</g>
+<path d="M0 645 L445 570 L600 800 H0Z" fill="#dfd2bf"/><path d="M1200 650 L760 575 L600 800 H1200Z" fill="#d9cbb9"/>
+<g stroke="#29443a" stroke-width="4" fill="none" opacity=".72">
+ <path d="M250 215V650M470 190V610M760 210V610M1030 260V650"/>
+ <path d="M80 365h95v118H80zM300 340h105v135H300zM830 335h105v140H830zM1060 375h85v115h-85z"/>
+ <path d="M600 800L575 565M600 800L625 565"/>
+</g>
+<g fill="#718579" opacity=".65"><circle cx="185" cy="550" r="45"/><circle cx="970" cy="565" r="55"/><circle cx="1050" cy="555" r="35"/></g>
+<circle cx="610" cy="170" r="72" fill="#b6975b" opacity=".16"/>
+</svg>

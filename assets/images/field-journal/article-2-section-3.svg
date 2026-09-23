@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="t d">
+<title id="t">幻想城市星圖</title><desc id="d">像地圖又像魔法陣的城市路線，淡紫、森林綠與銅金色節點彼此連結。</desc>
+<rect width="1200" height="800" fill="#f4eee2"/>
+<g fill="none" stroke="#9d8daf" opacity=".28">
+ <circle cx="600" cy="400" r="270" stroke-width="2"/><circle cx="600" cy="400" r="205"/><circle cx="600" cy="400" r="130" stroke-dasharray="8 12"/>
+</g>
+<g fill="none" stroke="#29443a" stroke-width="5" stroke-linecap="round" opacity=".78">
+ <path d="M130 610 C260 490 340 520 430 410 S610 290 690 350 S830 510 1060 205"/>
+ <path d="M170 245 C350 300 400 210 565 260 S760 340 1030 590"/>
+ <path d="M330 680 C480 575 650 660 850 565"/>
+</g>
+<g fill="#f4eee2" stroke="#a36d4f" stroke-width="4">
+ <circle cx="210" cy="545" r="16"/><circle cx="430" cy="410" r="18"/><circle cx="690" cy="350" r="18"/><circle cx="870" cy="455" r="17"/><circle cx="1035" cy="235" r="16"/>
+ <circle cx="355" cy="272" r="14"/><circle cx="566" cy="260" r="15"/><circle cx="792" cy="365" r="14"/><circle cx="958" cy="532" r="16"/>
+</g>
+<g fill="#b6975b" opacity=".7"><circle cx="600" cy="400" r="8"/><circle cx="260" cy="185" r="5"/><circle cx="1010" cy="660" r="5"/></g>
+</svg>

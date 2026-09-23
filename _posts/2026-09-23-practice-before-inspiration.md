@@ -5,7 +5,7 @@ description: "把創作從等待靈感，改造成每天都能靠近一點的生
 category: 創作方法
 tone: lavender
 cover_word: PRACTICE
-image: /assets/images/field-journal/article-1-section-1.webp
+image: /assets/images/field-journal/article-1-section-1.svg
 image_alt: "晨光窗邊的水彩書桌、筆記本、茶杯與淡紫色植物"
 ---
 
@@ -16,7 +16,7 @@ image_alt: "晨光窗邊的水彩書桌、筆記本、茶杯與淡紫色植物"
 ## 先讓寫作有一個可以反覆回去的地方
 
 <figure class="section-visual">
-  <img src="{{ '/assets/images/field-journal/article-1-section-1.webp' | relative_url }}" alt="晨光裡的水彩書桌與打開的筆記本" loading="lazy" decoding="async">
+  <img src="{{ '/assets/images/field-journal/article-1-section-1.svg' | relative_url }}" alt="晨光裡的水彩書桌與打開的筆記本" loading="lazy" decoding="async">
   <figcaption>水彩塗鴉風：把寫作空間想像成每天都能回去的一張桌子。</figcaption>
 </figure>
 
@@ -37,7 +37,7 @@ image_alt: "晨光窗邊的水彩書桌、筆記本、茶杯與淡紫色植物"
 ## 練習不是苦行，而是降低開始的阻力
 
 <figure class="section-visual">
-  <img src="{{ '/assets/images/field-journal/article-1-section-2.webp' | relative_url }}" alt="陽光下的寫實書桌、筆記本與茶杯" loading="lazy" decoding="async">
+  <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1400&q=82" alt="陽光下的寫實書桌、筆記本與茶杯" loading="lazy" decoding="async" referrerpolicy="no-referrer">
   <figcaption>寫實照片風：創作真正發生的地方，通常只是日常裡的一小段安靜。</figcaption>
 </figure>
 
@@ -56,7 +56,7 @@ image_alt: "晨光窗邊的水彩書桌、筆記本、茶杯與淡紫色植物"
 ## 當方法長出自己的魔法陣
 
 <figure class="section-visual">
-  <img src="{{ '/assets/images/field-journal/article-1-section-3.webp' | relative_url }}" alt="帶有淡紫色魔法圓環與漂浮紙張的幻想書桌" loading="lazy" decoding="async">
+  <img src="{{ '/assets/images/field-journal/article-1-section-3.svg' | relative_url }}" alt="帶有淡紫色魔法圓環與漂浮紙張的幻想書桌" loading="lazy" decoding="async">
   <figcaption>特殊風格：把流程視覺化成一個很淡的魔力迴路。</figcaption>
 </figure>
 

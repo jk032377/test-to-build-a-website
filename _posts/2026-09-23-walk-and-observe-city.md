@@ -5,7 +5,7 @@ description: "把散步從移動變成觀察，重新發現城市裡被速度遮
 category: 城市
 tone: lavender
 cover_word: WALK
-image: /assets/images/field-journal/article-2-section-1.webp
+image: /assets/images/field-journal/article-2-section-1.svg
 image_alt: "水彩古城巷弄、植物、筆記本與淡紫色花"
 ---
 
@@ -16,7 +16,7 @@ image_alt: "水彩古城巷弄、植物、筆記本與淡紫色花"
 ## 把散步當成一種採集
 
 <figure class="section-visual">
-  <img src="{{ '/assets/images/field-journal/article-2-section-1.webp' | relative_url }}" alt="水彩風的古城巷弄、筆記本與植物" loading="lazy" decoding="async">
+  <img src="{{ '/assets/images/field-journal/article-2-section-1.svg' | relative_url }}" alt="水彩風的古城巷弄、筆記本與植物" loading="lazy" decoding="async">
   <figcaption>水彩塗鴉風：街道可以是一頁不斷被補寫的田野筆記。</figcaption>
 </figure>
 
@@ -35,7 +35,7 @@ image_alt: "水彩古城巷弄、植物、筆記本與淡紫色花"
 ## 真實世界的光線，比答案更複雜
 
 <figure class="section-visual">
-  <img src="{{ '/assets/images/field-journal/article-2-section-2.webp' | relative_url }}" alt="金色夕光中的城市咖啡桌、書本與茶杯" loading="lazy" decoding="async">
+  <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=1400&q=82" alt="城市街道在自然光下的寫實景象" loading="lazy" decoding="async" referrerpolicy="no-referrer">
   <figcaption>寫實照片風：同一條街，在不同時間其實會變成完全不同的敘事。</figcaption>
 </figure>
 
@@ -54,7 +54,7 @@ image_alt: "水彩古城巷弄、植物、筆記本與淡紫色花"
 ## 把路線畫成自己的城市星圖
 
 <figure class="section-visual">
-  <img src="{{ '/assets/images/field-journal/article-2-section-3.webp' | relative_url }}" alt="帶星圖與魔力路線的幻想城市地圖" loading="lazy" decoding="async">
+  <img src="{{ '/assets/images/field-journal/article-2-section-3.svg' | relative_url }}" alt="帶星圖與魔力路線的幻想城市地圖" loading="lazy" decoding="async">
   <figcaption>特殊風格：讓走過的路線像星圖一樣，慢慢形成自己的城市版本。</figcaption>
 </figure>
 

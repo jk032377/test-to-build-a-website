@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="t d">
+<title id="t">幻想知識連線圖</title><desc id="d">漂浮紙張與星點以淡紫色線條連成知識網路，中央有不搶眼的魔法圓環。</desc>
+<rect width="1200" height="800" fill="#f2eadf"/>
+<g fill="none" stroke="#9d8daf" opacity=".32"><circle cx="600" cy="400" r="250" stroke-width="2"/><circle cx="600" cy="400" r="185"/><circle cx="600" cy="400" r="112" stroke-dasharray="6 14"/></g>
+<g stroke="#9d8daf" stroke-width="3" opacity=".55">
+ <path d="M265 210L455 320L600 400L770 285L960 210"/>
+ <path d="M330 610L470 500L600 400L760 515L930 620"/>
+ <path d="M455 320L470 500M770 285L760 515"/>
+</g>
+<g fill="#faf6ef" stroke="#29443a" stroke-width="3">
+ <rect x="195" y="145" width="140" height="105" transform="rotate(-8 265 198)"/>
+ <rect x="400" y="260" width="130" height="100" transform="rotate(4 465 310)"/>
+ <rect x="710" y="235" width="145" height="105" transform="rotate(-6 782 288)"/>
+ <rect x="875" y="555" width="140" height="100" transform="rotate(7 945 605)"/>
+ <rect x="280" y="550" width="140" height="100" transform="rotate(5 350 600)"/>
+</g>
+<g fill="#b6975b" stroke="#a36d4f" stroke-width="2">
+ <circle cx="600" cy="400" r="9"/><circle cx="455" cy="320" r="7"/><circle cx="470" cy="500" r="7"/><circle cx="770" cy="285" r="7"/><circle cx="760" cy="515" r="7"/>
+</g>
+<g fill="#9d8daf" opacity=".7"><circle cx="170" cy="390" r="5"/><circle cx="1030" cy="365" r="5"/><circle cx="600" cy="105" r="5"/></g>
+</svg>

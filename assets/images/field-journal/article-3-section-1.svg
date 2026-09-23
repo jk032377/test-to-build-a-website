@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="t d">
+<title id="t">水彩筆記與植物</title><desc id="d">米色水彩紙背景，數張筆記、鋼筆、枝葉與淡紫色圓形線條。</desc>
+<defs>
+ <filter id="wash"><feTurbulence baseFrequency=".015" numOctaves="2" seed="5" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="10"/></filter>
+</defs>
+<rect width="1200" height="800" fill="#f4eee2"/>
+<g filter="url(#wash)" opacity=".34"><ellipse cx="250" cy="260" rx="240" ry="150" fill="#d6c8df"/><ellipse cx="900" cy="500" rx="280" ry="170" fill="#aebcac"/><ellipse cx="620" cy="210" rx="190" ry="110" fill="#d7bca3"/></g>
+<g fill="#f9f5ed" stroke="#29443a" stroke-width="4">
+ <rect x="275" y="205" width="390" height="300" rx="8" transform="rotate(-4 470 355)"/>
+ <rect x="575" y="315" width="360" height="250" rx="8" transform="rotate(6 755 440)"/>
+</g>
+<g stroke="#9d8daf" stroke-width="3" opacity=".7">
+ <path d="M325 280h270M325 325h235M325 370h255M325 415h180"/>
+ <path d="M630 380h235M630 425h200M630 470h220"/>
+</g>
+<g stroke="#29443a" stroke-width="8" stroke-linecap="round"><path d="M850 165L575 610"/></g>
+<g fill="none" stroke="#718579" stroke-width="5" stroke-linecap="round">
+ <path d="M1010 150q-30 140-20 310"/><path d="M995 235q-80-55-130-28"/><path d="M995 300q70-60 125-35"/><path d="M992 375q-70-40-110-18"/>
+</g>
+<circle cx="910" cy="175" r="88" fill="none" stroke="#9d8daf" stroke-width="2" opacity=".35"/>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="t d">
+<title id="t">水彩書桌與筆記本</title><desc id="d">米色紙張、淡紫與綠色水彩暈染，桌上有打開的筆記本、茶杯與植物。</desc>
+<defs>
+ <filter id="w"><feTurbulence baseFrequency=".012" numOctaves="3" seed="7" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="12"/><feGaussianBlur stdDeviation="1.1"/></filter>
+ <linearGradient id="bg" x1="0" x2="1"><stop stop-color="#f4eee2"/><stop offset=".55" stop-color="#efe8dc"/><stop offset="1" stop-color="#eee7f2"/></linearGradient>
+</defs>
+<rect width="1200" height="800" fill="url(#bg)"/>
+<g opacity=".42" filter="url(#w)"><ellipse cx="230" cy="210" rx="210" ry="150" fill="#c9b8d8"/><ellipse cx="920" cy="250" rx="230" ry="160" fill="#9eae9e"/><ellipse cx="670" cy="590" rx="300" ry="115" fill="#d8bd9d"/></g>
+<path d="M0 548 C310 520 650 555 1200 520 V800H0Z" fill="#e2d5c4" opacity=".82"/>
+<g fill="none" stroke="#29443a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity=".9">
+ <path d="M380 565 Q505 505 610 548 Q720 505 850 560 L818 660 Q708 624 610 654 Q503 625 402 665Z"/>
+ <path d="M611 548 L610 654"/>
+ <ellipse cx="260" cy="575" rx="58" ry="45"/><path d="M315 572 q45 2 35 36 q-11 32-48 24"/>
+ <path d="M955 160 q-20 110-5 240"/><path d="M950 245 q-75-55-120-22"/><path d="M951 300 q75-70 130-45"/><path d="M948 350 q-65-38-105-15"/>
+</g>
+<g fill="#9d8daf" opacity=".28"><circle cx="860" cy="160" r="10"/><circle cx="1040" cy="170" r="7"/><circle cx="1058" cy="350" r="8"/></g>
+<path d="M120 115 C340 40 490 65 650 105" fill="none" stroke="#a36d4f" stroke-width="2" opacity=".35"/>
+</svg>

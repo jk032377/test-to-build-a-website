@@ -521,3 +521,24 @@ main>*{position:relative;z-index:1}
   .archive-row{grid-template-columns:90px 1fr}
   .timeline-item{grid-template-columns:62px 1fr}
 }
+
+
+/* 2026-09-23 hotfix: collapsed TOC + reliable media rendering */
+.reader-toc nav[hidden]{display:none!important}
+.post-reading-layout:has(.reader-toc.collapsed){
+  grid-template-columns:56px minmax(0,var(--reading)) 145px;
+  gap:32px;
+}
+.section-visual img,
+.post-visual img{
+  background:linear-gradient(135deg,rgba(216,207,226,.18),rgba(233,223,207,.28));
+}
+@media(max-width:1080px){
+  .post-reading-layout:has(.reader-toc.collapsed){
+    grid-template-columns:56px minmax(0,var(--reading));
+    gap:28px;
+  }
+}
+@media(max-width:880px){
+  .post-reading-layout:has(.reader-toc.collapsed){display:block}
+}

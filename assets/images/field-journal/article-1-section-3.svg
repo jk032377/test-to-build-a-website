@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="t d">
+<title id="t">幻想書桌與魔法圓環</title><desc id="d">低飽和紙張背景，打開的書本周圍有淡紫色魔法圓環、星點與漂浮紙張。</desc>
+<defs><radialGradient id="g"><stop stop-color="#f7f1e6"/><stop offset="1" stop-color="#e8dfd4"/></radialGradient></defs>
+<rect width="1200" height="800" fill="url(#g)"/>
+<g transform="translate(600 340)" fill="none" stroke="#9d8daf" opacity=".42">
+ <circle r="225" stroke-width="2"/><circle r="178"/><circle r="122" stroke-dasharray="5 15"/>
+ <path d="M-225 0H225M0-225V225M-160-160L160 160M160-160L-160 160"/>
+ <polygon points="0,-200 58,-80 190,-62 92,30 118,166 0,102 -118,166 -92,30 -190,-62 -58,-80" opacity=".3"/>
+</g>
+<g fill="#b6975b" opacity=".72"><circle cx="280" cy="180" r="5"/><circle cx="890" cy="160" r="4"/><circle cx="1010" cy="410" r="6"/><circle cx="340" cy="610" r="4"/></g>
+<g fill="#f7f1e6" stroke="#29443a" stroke-width="4" stroke-linejoin="round">
+ <path d="M350 510 Q500 440 600 495 Q705 440 855 510 L820 650 Q705 612 600 646 Q487 610 380 652Z"/>
+ <path d="M600 495V646"/>
+</g>
+<g fill="#f3ecdf" stroke="#a36d4f" stroke-width="3" opacity=".88">
+ <rect x="185" y="290" width="150" height="102" transform="rotate(-10 260 340)"/>
+ <rect x="860" y="260" width="145" height="98" transform="rotate(12 930 310)"/>
+</g>
+</svg>
