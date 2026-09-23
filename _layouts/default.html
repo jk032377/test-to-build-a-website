@@ -51,6 +51,7 @@
   }
   </script>
   {% else %}
+  {% capture search_target %}{{ '/search/?q=' | absolute_url }}{search_term_string}{% endcapture %}
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -61,7 +62,7 @@
     "inLanguage":"zh-TW",
     "potentialAction":{
       "@type":"SearchAction",
-      "target":{{ '/search/?q={search_term_string}' | absolute_url | jsonify }},
+      "target":{{ search_target | strip | jsonify }},
       "query-input":"required name=search_term_string"
     }
   }
