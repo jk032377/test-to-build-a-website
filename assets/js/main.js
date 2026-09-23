@@ -169,3 +169,26 @@ function initArchiveView(){
   setView(requested,false);
 }
 initArchiveView();
+
+
+function initReaderTocToggle(){
+  const box=document.getElementById('readerToc');
+  const button=document.getElementById('readerTocToggle');
+  const nav=document.getElementById('readerTocNav');
+  if(!box||!button||!nav) return;
+
+  const icon=button.querySelector('.toc-toggle-icon');
+  const stored=window.localStorage ? localStorage.getItem('margin-toc-collapsed') : null;
+
+  function setCollapsed(collapsed){
+    box.classList.toggle('collapsed',collapsed);
+    button.setAttribute('aria-expanded',String(!collapsed));
+    nav.hidden=collapsed;
+    if(icon) icon.textContent=collapsed?'＋':'−';
+    try{ localStorage.setItem('margin-toc-collapsed',collapsed?'1':'0'); }catch(e){}
+  }
+
+  if(stored==='1') setCollapsed(true);
+  button.addEventListener('click',()=>setCollapsed(!box.classList.contains('collapsed')));
+}
+initReaderTocToggle();

@@ -33,10 +33,11 @@ layout: default
 
   <div class="post-reading-layout">
     <aside class="reader-toc" id="readerToc" aria-label="文章目錄">
-      <div class="reader-toc-head">
+      <button class="reader-toc-toggle" id="readerTocToggle" type="button" aria-expanded="true" aria-controls="readerTocNav">
         <span class="toc-sigil" aria-hidden="true"></span>
-        <div class="reader-toc-label">文章目錄</div>
-      </div>
+        <span class="reader-toc-label">文章目錄</span>
+        <span class="toc-toggle-icon" aria-hidden="true">−</span>
+      </button>
       <nav id="readerTocNav"></nav>
     </aside>
 

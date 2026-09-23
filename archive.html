@@ -31,7 +31,6 @@ description: "留白誌所有文章與分類，可切換分類或時間軸瀏覽
       <a class="archive-row" href="{{ post.url | relative_url }}">
         <time>{{ post.date | date: "%Y.%m.%d" }}</time>
         <strong>{{ post.title }}</strong>
-        <span>→</span>
       </a>
       {% endfor %}
     </div>
@@ -56,7 +55,6 @@ description: "留白誌所有文章與分類，可切換分類或時間軸瀏覽
           <h2>{{ post.title }}</h2>
           {% if post.description %}<p>{{ post.description }}</p>{% endif %}
         </div>
-        <span class="timeline-arrow">↗</span>
       </a>
       {% endfor %}
     </div>
