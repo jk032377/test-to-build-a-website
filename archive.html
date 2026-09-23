@@ -2,18 +2,27 @@
 layout: default
 title: 文章
 permalink: /archive/
-description: "留白誌所有文章與分類。"
+description: "留白誌所有文章與分類，可切換分類或時間軸瀏覽。"
 ---
 <section class="page-hero shell">
-  <div class="eyebrow">ARCHIVE</div>
-  <h1>所有文章</h1>
-  <p>依照主題慢慢讀，不必一次讀完。</p>
+  <div class="eyebrow">ARCHIVE · FIELD NOTES</div>
+  <div class="page-hero-row">
+    <div>
+      <h1>所有文章</h1>
+      <p>依照主題慢慢讀，也可以切換成時間軸，看每個時期留下了什麼。</p>
+    </div>
+    <div class="archive-view-switch" role="group" aria-label="文章檢視方式">
+      <button type="button" class="archive-view-btn active" data-archive-view="category" aria-pressed="true">分類</button>
+      <button type="button" class="archive-view-btn" data-archive-view="timeline" aria-pressed="false">時間軸</button>
+    </div>
+  </div>
 </section>
 
-<section class="shell archive-wrap">
+<section class="shell archive-wrap archive-view-panel active" id="archiveCategoryView" data-archive-panel="category">
   {% for category in site.categories %}
   <section class="archive-group">
     <div class="archive-title">
+      <div class="archive-sigil" aria-hidden="true">✦</div>
       <h2>{{ category[0] }}</h2>
       <span>{{ category[1].size }} 篇</span>
     </div>
@@ -23,6 +32,31 @@ description: "留白誌所有文章與分類。"
         <time>{{ post.date | date: "%Y.%m.%d" }}</time>
         <strong>{{ post.title }}</strong>
         <span>→</span>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+</section>
+
+<section class="shell timeline-wrap archive-view-panel" id="archiveTimelineView" data-archive-panel="timeline" hidden>
+  {% assign posts_by_year = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
+  {% for year in posts_by_year %}
+  <section class="timeline-year">
+    <div class="timeline-year-mark">
+      <span>{{ year.name }}</span>
+      <i></i>
+    </div>
+    <div class="timeline-list">
+      {% for post in year.items %}
+      <a class="timeline-item" href="{{ post.url | relative_url }}">
+        <time>{{ post.date | date: "%m.%d" }}</time>
+        <div>
+          <span class="timeline-category">{{ post.category }}</span>
+          <h2>{{ post.title }}</h2>
+          {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+        </div>
+        <span class="timeline-arrow">↗</span>
       </a>
       {% endfor %}
     </div>

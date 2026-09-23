@@ -7,10 +7,16 @@ timezone: "Asia/Taipei"
 permalink: /journal/:year/:month/:day/:title/
 markdown: kramdown
 future: false
+author:
+  name: "Mukai"
+social_image: "/assets/images/margin-hero.webp"
 google_analytics_id: ""
 google_adsense_id: ""
+feed:
+  path: feed.xml
 plugins:
   - jekyll-sitemap
+  - jekyll-feed
 exclude:
   - README.md
   - MIGRATION-WP-TO-GITHUB.md

@@ -3,9 +3,16 @@ layout: default
 ---
 <article class="post">
   <header class="post-hero shell-narrow">
+    <nav class="breadcrumbs" aria-label="麵包屑">
+      <a href="{{ '/' | relative_url }}">首頁</a>
+      <span>／</span>
+      <a href="{{ '/archive/' | relative_url }}">文章</a>
+      <span>／</span>
+      <span aria-current="page">{{ page.category | default: page.categories.first }}</span>
+    </nav>
     <div class="post-hero-topline">
       <div class="eyebrow">{{ page.category | default: page.categories.first }}</div>
-      <div class="post-issue">MARGIN · LONGFORM</div>
+      <div class="post-issue">FIELD NOTE · LONGFORM</div>
     </div>
     <h1>{{ page.title }}</h1>
     {% if page.description %}<p class="post-deck">{{ page.description }}</p>{% endif %}
@@ -14,11 +21,11 @@ layout: default
       <span>約 {{ content | number_of_words | divided_by: 350 | plus: 1 }} 分鐘閱讀</span>
     </div>
     {% if page.image %}
-    <figure class="post-visual">
-      <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title | escape }}">
+    <figure class="post-visual rune-frame">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title | escape }}" fetchpriority="high" decoding="async">
     </figure>
     {% else %}
-    <div class="cover cover-{{ page.tone | default: 'sand' }}" role="img" aria-label="文章封面裝飾">
+    <div class="cover cover-{{ page.tone | default: 'sand' }} rune-frame" role="img" aria-label="文章封面裝飾">
       <span>{{ page.cover_word | default: page.category }}</span>
     </div>
     {% endif %}
@@ -26,7 +33,10 @@ layout: default
 
   <div class="post-reading-layout">
     <aside class="reader-toc" id="readerToc" aria-label="文章目錄">
-      <div class="reader-toc-label">文章目錄</div>
+      <div class="reader-toc-head">
+        <span class="toc-sigil" aria-hidden="true"></span>
+        <div class="reader-toc-label">文章目錄</div>
+      </div>
       <nav id="readerTocNav"></nav>
     </aside>
 
@@ -37,7 +47,9 @@ layout: default
     <aside class="post-side-note" aria-hidden="true">
       <span>READ</span>
       <i></i>
-      <span>SLOW</span>
+      <b>✦</b>
+      <i></i>
+      <span>MAKE</span>
     </aside>
   </div>
 
@@ -52,7 +64,7 @@ layout: default
     </div>
 
     <section class="recommend">
-      <div class="section-heading">
+      <div class="section-heading quest-heading">
         <span>READ NEXT</span>
         <h2>推薦閱讀</h2>
       </div>
@@ -62,7 +74,7 @@ layout: default
           {% if post.url != page.url and shown < 3 %}
             {% if post.category == page.category or page.related contains post.slug %}
               <a class="mini-card" href="{{ post.url | relative_url }}">
-                {% if post.image %}<div class="mini-cover mini-photo"><img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}">{% else %}<div class="mini-cover cover-{{ post.tone | default: 'sand' }}">{% endif %}</div>
+                {% if post.image %}<div class="mini-cover mini-photo"><img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}" loading="lazy" decoding="async">{% else %}<div class="mini-cover cover-{{ post.tone | default: 'sand' }}">{% endif %}</div>
                 <div class="mini-meta">{{ post.category }} · {{ post.date | date: "%Y.%m.%d" }}</div>
                 <h3>{{ post.title }}</h3>
               </a>
@@ -74,7 +86,7 @@ layout: default
           {% for post in site.posts limit:3 %}
             {% if post.url != page.url %}
               <a class="mini-card" href="{{ post.url | relative_url }}">
-                {% if post.image %}<div class="mini-cover mini-photo"><img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}">{% else %}<div class="mini-cover cover-{{ post.tone | default: 'sand' }}">{% endif %}</div>
+                {% if post.image %}<div class="mini-cover mini-photo"><img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}" loading="lazy" decoding="async">{% else %}<div class="mini-cover cover-{{ post.tone | default: 'sand' }}">{% endif %}</div>
                 <div class="mini-meta">{{ post.category }} · {{ post.date | date: "%Y.%m.%d" }}</div>
                 <h3>{{ post.title }}</h3>
               </a>

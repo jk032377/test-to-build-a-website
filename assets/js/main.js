@@ -119,7 +119,7 @@ function initReaderToc(){
   let activeId=heads[0]?.id;
 
   function setActive(id){
-    if(!id||id===activeId) return;
+    if(!id) return;
     activeId=id;
     links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+id));
   }
@@ -136,3 +136,36 @@ function initReaderToc(){
   heads.forEach(h=>obs.observe(h));
 }
 initReaderToc();
+
+function initArchiveView(){
+  const buttons=[...document.querySelectorAll('[data-archive-view]')];
+  const panels=[...document.querySelectorAll('[data-archive-panel]')];
+  if(!buttons.length||!panels.length) return;
+
+  const params=new URLSearchParams(window.location.search);
+  const requested=params.get('view')==='timeline'?'timeline':'category';
+
+  function setView(view,updateUrl=true){
+    buttons.forEach(btn=>{
+      const active=btn.dataset.archiveView===view;
+      btn.classList.toggle('active',active);
+      btn.setAttribute('aria-pressed',String(active));
+    });
+    panels.forEach(panel=>{
+      const active=panel.dataset.archivePanel===view;
+      panel.classList.toggle('active',active);
+      panel.hidden=!active;
+    });
+
+    if(updateUrl){
+      const url=new URL(window.location.href);
+      if(view==='timeline') url.searchParams.set('view','timeline');
+      else url.searchParams.delete('view');
+      window.history.replaceState({},'',url);
+    }
+  }
+
+  buttons.forEach(btn=>btn.addEventListener('click',()=>setView(btn.dataset.archiveView)));
+  setView(requested,false);
+}
+initArchiveView();

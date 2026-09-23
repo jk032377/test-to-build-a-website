@@ -3,9 +3,10 @@ layout: default
 title: 搜尋
 permalink: /search/
 description: "搜尋留白誌文章。"
+robots: "noindex,follow"
 ---
 <section class="page-hero shell-narrow">
-  <div class="eyebrow">SEARCH</div>
+  <div class="eyebrow">SEARCH · INDEX</div>
   <h1>搜尋文章</h1>
   <p>可搜尋標題、摘要、分類與文章內容關鍵字。</p>
 </section>
@@ -13,12 +14,12 @@ description: "搜尋留白誌文章。"
 <section class="shell-narrow search-wrap">
   <form class="search-form" id="searchForm">
     <label for="searchInput">輸入關鍵字</label>
-    <div class="search-input-row">
-      <input id="searchInput" type="search" name="q" placeholder="例如：閱讀、城市、筆記、生活">
+    <div class="search-input-row rune-frame">
+      <input id="searchInput" type="search" name="q" placeholder="例如：閱讀、城市、筆記、生活" autocomplete="off">
       <button type="submit">搜尋</button>
     </div>
   </form>
 
-  <div class="search-status" id="searchStatus">請輸入關鍵字開始搜尋。</div>
+  <div class="search-status" id="searchStatus" aria-live="polite">請輸入關鍵字開始搜尋。</div>
   <div class="search-results" id="searchResults"></div>
 </section>

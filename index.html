@@ -3,11 +3,11 @@ layout: default
 title:
 description: "留白誌 MARGIN：關於閱讀、生活與城市的獨立筆記。"
 ---
-<section class="home-masthead shell">
-  <div class="masthead-panel">
-    <div class="masthead-kicker">INDEPENDENT JOURNAL · ISSUE 001</div>
-    <h1>替思考留一塊<br><em>不必急著填滿</em>的地方。</h1>
-    <p>閱讀、生活、城市與那些值得被多看一眼的事。不是把資訊堆得更滿，而是讓真正重要的內容被看見。</p>
+<section class="home-masthead">
+  <div class="masthead-panel rune-frame">
+    <div class="masthead-kicker">FIELD JOURNAL · ISSUE 001</div>
+    <h1>把想像寫下來，<br><em>再一步一步練成真的。</em></h1>
+    <p>閱讀、寫作、生活與那些值得反覆實踐的事。像一本旅行者的筆記，也像一份持續更新的創作修練紀錄。</p>
     <div class="masthead-actions">
       <a class="masthead-primary" href="{{ '/archive/' | relative_url }}">開始閱讀 <span>→</span></a>
       <form class="masthead-search" action="{{ '/search/' | relative_url }}" method="get">
@@ -17,8 +17,11 @@ description: "留白誌 MARGIN：關於閱讀、生活與城市的獨立筆記�
       </form>
     </div>
     <div class="masthead-orbit" aria-hidden="true">
-      <span class="masthead-sun"></span>
-      <span class="masthead-branch"></span>
+      <span class="masthead-ring ring-one"></span>
+      <span class="masthead-ring ring-two"></span>
+      <span class="masthead-star star-one">✦</span>
+      <span class="masthead-star star-two">✧</span>
+      <span class="masthead-path"></span>
     </div>
   </div>
 </section>
@@ -26,9 +29,9 @@ description: "留白誌 MARGIN：關於閱讀、生活與城市的獨立筆記�
 {% assign featured = site.posts.first %}
 {% if featured %}
 <section class="feature shell">
-  <a class="feature-cover{% unless featured.image %} cover-{{ featured.tone | default: 'sand' }} sketchy-frame{% endunless %}" href="{{ featured.url | relative_url }}">
+  <a class="feature-cover rune-frame{% unless featured.image %} cover-{{ featured.tone | default: 'sand' }}{% endunless %}" href="{{ featured.url | relative_url }}">
     {% if featured.image %}
-      <img class="feature-photo" src="{{ featured.image | relative_url }}" alt="{{ featured.image_alt | default: featured.title | escape }}">
+      <img class="feature-photo" src="{{ featured.image | relative_url }}" alt="{{ featured.image_alt | default: featured.title | escape }}" decoding="async">
     {% else %}
       <span>{{ featured.cover_word | default: featured.category }}</span>
     {% endif %}
@@ -43,17 +46,16 @@ description: "留白誌 MARGIN：關於閱讀、生活與城市的獨立筆記�
 {% endif %}
 
 <section class="shell section-block">
-  <div class="section-heading ruled with-doodle">
+  <div class="section-heading ruled quest-heading">
     <span>EDITOR'S PICKS</span>
     <h2>編輯選讀</h2>
-    <div class="heading-doodle heading-doodle-wave" aria-hidden="true"></div>
   </div>
 
   <div class="editor-grid">
     {% for post in site.posts offset:1 limit:3 %}
     <article class="editor-card">
-      <a class="card-cover{% unless post.image %} cover-{{ post.tone | default: 'sand' }} sketchy-frame{% endunless %}" href="{{ post.url | relative_url }}">
-        {% if post.image %}<img class="card-photo" src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title | escape }}">{% endif %}
+      <a class="card-cover rune-frame{% unless post.image %} cover-{{ post.tone | default: 'sand' }}{% endunless %}" href="{{ post.url | relative_url }}">
+        {% if post.image %}<img class="card-photo" src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title | escape }}" loading="lazy" decoding="async">{% endif %}
       </a>
       <div class="card-meta">{{ post.category }} · {{ post.date | date: "%Y.%m.%d" }}</div>
       <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
@@ -64,10 +66,9 @@ description: "留白誌 MARGIN：關於閱讀、生活與城市的獨立筆記�
 </section>
 
 <section class="shell section-block latest">
-  <div class="section-heading ruled with-doodle">
-    <span>LATEST STORIES</span>
+  <div class="section-heading ruled quest-heading">
+    <span>LATEST FIELD NOTES</span>
     <h2>最新文章</h2>
-    <div class="heading-doodle heading-doodle-loop" aria-hidden="true"></div>
   </div>
 
   <div class="story-list">
@@ -84,5 +85,8 @@ description: "留白誌 MARGIN：關於閱讀、生活與城市的獨立筆記�
     {% endfor %}
   </div>
 
-  <div class="center"><a class="outline-button" href="{{ '/archive/' | relative_url }}">查看所有文章</a></div>
+  <div class="center archive-actions">
+    <a class="outline-button" href="{{ '/archive/' | relative_url }}">查看所有文章</a>
+    <a class="quiet-button" href="{{ '/archive/?view=timeline' | relative_url }}">以時間軸查看</a>
+  </div>
 </section>
