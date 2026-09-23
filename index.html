@@ -1,52 +1,31 @@
 ---
 layout: default
 title:
-description: "木凱創作道 MUKAI WORD：寫作方法、文學閱讀、電影札記與創作現場。"
+description: "留白誌 MARGIN：關於閱讀、生活與城市的獨立筆記。"
 ---
-<section class="mukai-hero shell">
-  <div class="mukai-hero-grid">
-    <div class="mukai-hero-main">
-      <div class="hero-kicker">WRITING · LITERATURE · FILM · NOTES</div>
-      <div class="mukai-title-stack">
-        <h1>木凱創作道</h1>
-        <div class="mukai-en">MUKAI WORD</div>
-      </div>
-      <p class="mukai-manifesto">陪你一起走創作者之路。<br>把方法整理清楚，也把那些仍然曖昧、值得慢慢想的部分留下來。</p>
-      <div class="mukai-hero-actions">
-        <a class="outline-button" href="{{ '/archive/' | relative_url }}">進入部落格</a>
-        <a class="text-link" href="{{ '/about/' | relative_url }}">關於木凱 →</a>
-      </div>
-    </div>
-
-    <aside class="mukai-hero-side">
-      <div class="mukai-side-label">FIELD NOTES</div>
-      <ul>
-        <li><span>01</span> 創作方法</li>
-        <li><span>02</span> 文學閱讀</li>
-        <li><span>03</span> 電影札記</li>
-        <li><span>04</span> 創作現場</li>
-      </ul>
-      <div class="mukai-orbit" aria-hidden="true">
-        <span class="orbit-sun"></span><span class="orbit-line"></span>
-      </div>
-      <form class="quick-search" action="{{ '/search/' | relative_url }}" method="get">
-        <label class="sr-only" for="quick-search-input">搜尋文章</label>
-        <input id="quick-search-input" type="search" name="q" placeholder="搜尋文章、方法或關鍵字">
-        <button type="submit">搜尋</button>
+<section class="home-masthead shell">
+  <div class="masthead-panel">
+    <div class="masthead-kicker">INDEPENDENT JOURNAL · ISSUE 001</div>
+    <h1>替思考留一塊<br><em>不必急著填滿</em>的地方。</h1>
+    <p>閱讀、生活、城市與那些值得被多看一眼的事。不是把資訊堆得更滿，而是讓真正重要的內容被看見。</p>
+    <div class="masthead-actions">
+      <a class="masthead-primary" href="{{ '/archive/' | relative_url }}">開始閱讀 <span>→</span></a>
+      <form class="masthead-search" action="{{ '/search/' | relative_url }}" method="get">
+        <label class="sr-only" for="masthead-search-input">搜尋文章</label>
+        <input id="masthead-search-input" type="search" name="q" placeholder="搜尋文章">
+        <button type="submit" aria-label="搜尋">↗</button>
       </form>
-    </aside>
+    </div>
+    <div class="masthead-orbit" aria-hidden="true">
+      <span class="masthead-sun"></span>
+      <span class="masthead-branch"></span>
+    </div>
   </div>
 </section>
 
-{% assign migrated_posts = site.posts | where: "migrated", true %}
-{% if migrated_posts.size > 0 %}
-  {% assign featured = migrated_posts.first %}
-{% else %}
-  {% assign featured = site.posts.first %}
-{% endif %}
-
+{% assign featured = site.posts.first %}
 {% if featured %}
-<section class="feature feature-mukai shell">
+<section class="feature shell">
   <a class="feature-cover{% unless featured.image %} cover-{{ featured.tone | default: 'sand' }} sketchy-frame{% endunless %}" href="{{ featured.url | relative_url }}">
     {% if featured.image %}
       <img class="feature-photo" src="{{ featured.image | relative_url }}" alt="{{ featured.image_alt | default: featured.title | escape }}">
@@ -55,51 +34,26 @@ description: "木凱創作道 MUKAI WORD：寫作方法、文學閱讀、電影�
     {% endif %}
   </a>
   <div class="feature-copy">
-    <div class="eyebrow">FROM MUKAIWORD · {{ featured.category }}</div>
+    <div class="eyebrow">FEATURED · {{ featured.category }}</div>
     <h2><a href="{{ featured.url | relative_url }}">{{ featured.title }}</a></h2>
     <p>{{ featured.description }}</p>
-    <div class="feature-meta">{{ featured.date | date: "%Y.%m.%d" }}</div>
     <a class="text-link" href="{{ featured.url | relative_url }}">閱讀全文 →</a>
   </div>
 </section>
 {% endif %}
 
-<section class="shell section-block topic-block">
-  <div class="section-heading ruled with-doodle">
-    <span>WRITING PATHS</span>
-    <h2>從哪一條路開始讀</h2>
-    <div class="heading-doodle heading-doodle-loop" aria-hidden="true"></div>
-  </div>
-  <div class="topic-grid">
-    <a class="topic-card topic-clay" href="{{ '/archive/#創作方法' | relative_url }}">
-      <span>01</span><h3>創作方法</h3><p>寫作習慣、改稿、工具與如何繼續走下去。</p>
-    </a>
-    <a class="topic-card topic-sage" href="{{ '/archive/' | relative_url }}">
-      <span>02</span><h3>文學閱讀</h3><p>從作品、詩與文學獎裡，拆解文字如何運作。</p>
-    </a>
-    <a class="topic-card topic-blue" href="{{ '/archive/#電影札記' | relative_url }}">
-      <span>03</span><h3>電影札記</h3><p>把電影當成另一種敘事文本，從故事與象徵切入。</p>
-    </a>
-    <a class="topic-card topic-sand" href="{{ '/archive/#創作現場' | relative_url }}">
-      <span>04</span><h3>創作現場</h3><p>交流會、計畫、出版與創作者日常留下的側記。</p>
-    </a>
-  </div>
-</section>
-
 <section class="shell section-block">
   <div class="section-heading ruled with-doodle">
-    <span>MUKAIWORD ARCHIVE</span>
-    <h2>從舊站搬來的文章</h2>
+    <span>EDITOR'S PICKS</span>
+    <h2>編輯選讀</h2>
     <div class="heading-doodle heading-doodle-wave" aria-hidden="true"></div>
   </div>
 
-  <div class="migrated-grid">
-    {% assign source_posts = migrated_posts %}
-    {% if source_posts.size == 0 %}{% assign source_posts = site.posts %}{% endif %}
-    {% for post in source_posts limit:5 %}
-    <article class="migrated-card">
-      <a class="migrated-card-media{% unless post.image %} cover-{{ post.tone | default: 'sand' }}{% endunless %}" href="{{ post.url | relative_url }}">
-        {% if post.image %}<img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title | escape }}">{% endif %}
+  <div class="editor-grid">
+    {% for post in site.posts offset:1 limit:3 %}
+    <article class="editor-card">
+      <a class="card-cover{% unless post.image %} cover-{{ post.tone | default: 'sand' }} sketchy-frame{% endunless %}" href="{{ post.url | relative_url }}">
+        {% if post.image %}<img class="card-photo" src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title | escape }}">{% endif %}
       </a>
       <div class="card-meta">{{ post.category }} · {{ post.date | date: "%Y.%m.%d" }}</div>
       <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
@@ -109,12 +63,26 @@ description: "木凱創作道 MUKAI WORD：寫作方法、文學閱讀、電影�
   </div>
 </section>
 
-<section class="shell section-block mukai-about-band">
-  <div class="mukai-about-monogram">木</div>
-  <div>
-    <div class="eyebrow">ABOUT MUKAI</div>
-    <h2>把創作經驗整理成可以再次使用的路標。</h2>
-    <p>木凱創作道從舊站的「部落格＋創作方法」出發，新版保留分類與長文閱讀，同時改成更安靜、像獨立刊物的閱讀介面。</p>
+<section class="shell section-block latest">
+  <div class="section-heading ruled with-doodle">
+    <span>LATEST STORIES</span>
+    <h2>最新文章</h2>
+    <div class="heading-doodle heading-doodle-loop" aria-hidden="true"></div>
   </div>
-  <a class="outline-button" href="{{ '/about/' | relative_url }}">認識木凱</a>
+
+  <div class="story-list">
+    {% for post in site.posts limit:8 %}
+    <a class="story-row" href="{{ post.url | relative_url }}">
+      <div class="story-no">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</div>
+      <div class="story-main">
+        <div class="card-meta">{{ post.category }}</div>
+        <h3>{{ post.title }}</h3>
+      </div>
+      <div class="story-date">{{ post.date | date: "%Y.%m.%d" }}</div>
+      <div class="story-arrow">↗</div>
+    </a>
+    {% endfor %}
+  </div>
+
+  <div class="center"><a class="outline-button" href="{{ '/archive/' | relative_url }}">查看所有文章</a></div>
 </section>
