@@ -5,8 +5,8 @@ description: "用一篇示範文章測試 H2、H3、H4、圖片、螢光筆、�
 category: 編輯設計
 tone: sage
 cover_word: FORM
-image: /assets/images/margin-hero.webp
-image_alt: "留白誌 MARGIN：書本、咖啡、枝葉與暖色圓日構成的文青編輯主視覺"
+image: /assets/images/generated/generated-8.webp
+image_alt: "筆記本、書籍、茶杯與植物組成的編輯設計工作桌景"
 ---
 
 真正舒服的長文，不是把所有元素縮小、變淡，而是讓讀者一眼知道：**現在讀到哪裡、下一步會去哪裡、哪些地方值得停一下。**
@@ -37,7 +37,7 @@ H4 比較像一個小標籤，因此我讓它變成淡粉褐色的膠囊形狀�
 - 操作步驟裡的次層細節
 
 <figure>
-  <img src="{{ '/assets/images/editorial-reading.svg' | relative_url }}" alt="書本、茶杯與枝葉的閱讀插畫">
+  <img src="{{ '/assets/images/generated/generated-1.webp' | relative_url }}" alt="書本、茶杯、薰衣草與城市遠景的閱讀桌景">
   <figcaption>圖片可以直接置於長文中，圖說保持小而安靜，不打斷閱讀。</figcaption>
 </figure>
 
@@ -66,7 +66,7 @@ H4 比較像一個小標籤，因此我讓它變成淡粉褐色的膠囊形狀�
 照片不需要再疊太多框線或陰影。網站本身已經有暖紙色、細線與低彩度，圖片只要乾淨地被看見就夠了。
 
 <figure>
-  <img src="{{ '/assets/images/editorial-notes.svg' | relative_url }}" alt="筆記本、鋼筆、茶杯與枝葉的寫作桌景插畫">
+  <img src="{{ '/assets/images/generated/generated-9.webp' | relative_url }}" alt="漂浮筆記、植物與淡金魔法線條構成的寫作桌景">
   <figcaption>第二張示意圖：測試文章內連續出現多張圖片時的視覺節奏。</figcaption>
 </figure>
 

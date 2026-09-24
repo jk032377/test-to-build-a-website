@@ -5,8 +5,8 @@ description: "從收集資料走向重新排列，讓筆記成為思考會再次
 category: 筆記
 tone: lavender
 cover_word: NOTES
-image: /assets/images/field-journal/article-3-section-1.svg
-image_alt: "水彩筆記本、植物、鋼筆與淡紫色圖陣"
+image: /assets/images/generated/generated-7.webp
+image_alt: "植物標本、手寫筆記與地圖排列成的淡紫色幻想知識桌景"
 ---
 
 我們很容易把筆記理解成倉庫：看過的東西放進去、重要的句子存起來、網址分類好，然後安心地覺得「以後會用」。
@@ -16,7 +16,7 @@ image_alt: "水彩筆記本、植物、鋼筆與淡紫色圖陣"
 ## 一則好筆記，應該留下重新進入的入口
 
 <figure class="section-visual">
-  <img src="{{ '/assets/images/field-journal/article-3-section-1.svg' | relative_url }}" alt="水彩風筆記本、葉片、鋼筆與淡紫色圓形線條" loading="lazy" decoding="async">
+  <img src="{{ '/assets/images/generated/generated-7.webp' | relative_url }}" alt="水彩風筆記本、葉片、鋼筆與淡紫色圓形線條" loading="lazy" decoding="async">
   <figcaption>水彩塗鴉風：筆記不是封存，而是留下下一次可以重新走進去的入口。</figcaption>
 </figure>
 
@@ -33,7 +33,7 @@ image_alt: "水彩筆記本、植物、鋼筆與淡紫色圖陣"
 ## 從收集走向重新排列
 
 <figure class="section-visual">
-  <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1400&q=82" alt="寫實風的書桌、開放筆記本與書寫工具" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+  <img src="{{ '/assets/images/generated/generated-8.webp' | relative_url }}" alt="寫實風的書桌、開放筆記本與書寫工具" loading="lazy" decoding="async">
   <figcaption>寫實照片風：整理不是把每張紙排整齊，而是知道下一次要從哪裡開始。</figcaption>
 </figure>
 
@@ -52,7 +52,7 @@ image_alt: "水彩筆記本、植物、鋼筆與淡紫色圖陣"
 ## 讓知識之間出現微弱但可辨認的連線
 
 <figure class="section-visual">
-  <img src="{{ '/assets/images/field-journal/article-3-section-3.svg' | relative_url }}" alt="帶有魔法圓環、星點與漂浮紙張的幻想知識書桌" loading="lazy" decoding="async">
+  <img src="{{ '/assets/images/generated/generated-9.webp' | relative_url }}" alt="帶有魔法圓環、星點與漂浮紙張的幻想知識書桌" loading="lazy" decoding="async">
   <figcaption>特殊風格：把筆記間的連結想像成很淡的魔力線，不搶眼，但能引導下一步。</figcaption>
 </figure>
 

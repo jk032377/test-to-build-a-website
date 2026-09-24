@@ -5,8 +5,8 @@ description: "當資訊的速度超過我們真正能吸收的速度，閱讀也
 category: 閱讀
 tone: sand
 cover_word: READ
-image: /assets/images/editorial-reading.svg
-image_alt: "茶杯、攤開書本與枝葉構成的極簡閱讀編輯插畫"
+image: /assets/images/generated/generated-1.webp
+image_alt: "薰衣草、書本、茶杯與遠方城市構成的暖色閱讀桌景"
 ---
 
 我們很容易把閱讀也變成一種待辦事項：一週要讀幾本書、一天要讀幾頁、今年要完成多少清單。可是真正留在身上的東西，往往不是那些被勾掉的數字。
@@ -26,7 +26,7 @@ image_alt: "茶杯、攤開書本與枝葉構成的極簡閱讀編輯插畫"
 第一次抓情節，第二次看結構，第三次才發現以前完全沒有看到的細節。閱讀不是一次性的消耗。
 
 <figure>
-  <img src="{{ '/assets/images/editorial-reading.svg' | relative_url }}" alt="書本與茶杯構成的閱讀插畫">
+  <img src="{{ '/assets/images/generated/generated-2.webp' | relative_url }}" alt="窗邊茶杯與打開書本的閱讀桌景">
   <figcaption>把注意力當成有限資源，閱讀就會從數量重新回到選擇。</figcaption>
 </figure>
 

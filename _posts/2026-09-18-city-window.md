@@ -5,6 +5,8 @@ description: "窗戶像一個固定的鏡頭，把原本容易錯過的生活切
 category: 城市
 tone: blue
 cover_word: CITY
+image: /assets/images/generated/generated-5.webp
+image_alt: "城市窗景、書本、茶杯與夕陽形成的溫暖閱讀角落"
 ---
 每天經過同一條路，城市看起來總像沒有改變。但只要停下來，差異其實非常多：一間店換了招牌、一棵樹抽出新葉、巷口多了一張塑膠椅。
 

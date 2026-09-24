@@ -5,6 +5,8 @@ description: "不是每一個空白都需要被填滿。沒有目的的時間，
 category: 生活
 tone: sage
 cover_word: PAUSE
+image: /assets/images/generated/generated-2.webp
+image_alt: "陽光穿過窗邊植物，茶杯與打開的筆記本形成安靜留白的桌景"
 ---
 行程表最容易讓人產生一種錯覺：只要每一格都填得漂亮，生活就會變得更完整。
 

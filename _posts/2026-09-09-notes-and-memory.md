@@ -5,6 +5,8 @@ description: "好的筆記系統不是倉庫，而是一個讓舊想法重新碰
 category: 筆記
 tone: rose
 cover_word: NOTE
+image: /assets/images/generated/generated-7.webp
+image_alt: "植物標本、筆記本、地圖與淡紫色魔法線條構成的幻想筆記桌景"
 ---
 我們很容易把筆記工具當成更精緻的儲藏室：資料夾分得更細、標籤下得更多、頁面整理得更漂亮。
 
